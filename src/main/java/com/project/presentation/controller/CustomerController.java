@@ -15,6 +15,9 @@ import java.util.List;
 @RequestMapping("/api/customer")
 public class CustomerController {
 
+    /**
+     * Repository for accessing Customer data.
+     */
     private final CustomerRepository customerRepository;
 
     /**
