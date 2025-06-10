@@ -17,6 +17,10 @@ public class CustomerController {
 
     private final CustomerRepository customerRepository;
 
+    /**
+     * This controller handles CRUD operations for Customer entities.
+     * It uses the CustomerRepository to interact with the database.
+     */
     @GetMapping("/findAll")
     public ResponseEntity<List<Customer>> getAllCustomers() {
         return ResponseEntity.ok(this.customerRepository.findAll());
