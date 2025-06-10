@@ -49,6 +49,11 @@ public class CustomerController {
         return new ResponseEntity(savedCustomer, HttpStatus.CREATED);
     }
 
+    /**
+     * Deletes a customer by their ID.
+     * @param id the ID of the customer to delete
+     * @return ResponseEntity indicating the result of the deletion
+     */
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<HttpStatusCode> deleteCustomer(@PathVariable Long id) {
         this.customerRepository.deleteById(id);
