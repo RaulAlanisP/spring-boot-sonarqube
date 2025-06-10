@@ -26,6 +26,11 @@ public class CustomerController {
         return ResponseEntity.ok(this.customerRepository.findAll());
     }
 
+    /**
+     * Retrieves a customer by their ID.
+     * @param id the ID of the customer to retrieve
+     * @return ResponseEntity containing the customer if found, or an error if not found
+     */
     @GetMapping("/find/{id}")
     public ResponseEntity<Customer> getCustomerById(@PathVariable Long id) {
         Customer customer = this.customerRepository.findById(id).orElseThrow();
