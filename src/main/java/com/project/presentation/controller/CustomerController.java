@@ -37,6 +37,12 @@ public class CustomerController {
         return ResponseEntity.ok(customer);
     }
 
+    /**
+     * Updates an existing customer.
+     * @param id the ID of the customer to update
+     * @param customer the updated customer data
+     * @return ResponseEntity containing the updated customer
+     */
     @PostMapping("/save")
     public ResponseEntity<Customer> saveCustomer(Customer customer) {
         Customer savedCustomer = this.customerRepository.save(customer);
